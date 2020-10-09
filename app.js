@@ -14,8 +14,14 @@ console.log(usuario);
 let fs = require('fs');
 let cpu_string = JSON.stringify(cpu);
 
-fs.appendFile('node.txt', `Info cpu: ${cpu_string}`, function (error) {
+fs.appendFile('node.txt', `Info cpu: ${cpu_string}`, (error) => {
     if (error) {
         console.log('Error al crear archivo');
     }
 });
+
+//Requerir hi
+const hi = require('./hi');
+
+console.log(hi.hola);
+hi.sayHi();
